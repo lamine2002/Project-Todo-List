@@ -1,0 +1,66 @@
+.content{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    font-size: 1.3rem;
+}
+
+
+.sideBar{
+    width: 23%;
+    height: 100%;
+    background-color: #06f9f5;
+    display: flex;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-top: 5%;
+}
+
+.navbar{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f8efe7;
+}
+.upContent{
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.mainContent{
+    width: 77%;
+    height: 100%;
+    background-color: #f8efe7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btnAdd{
+    width: 30%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 5%;
+}
+
+.mainContent > .navBar{
+
+    width: 100%;
+    height: 10vh;
+    align-items: center;
+    background-color: #06f9f5;
+    padding-top: 1rem;
+}
+
+.mainContent > .navBar > span{
+    color: black;
+    font-size: 1.3rem;
+    margin-left: 5%;
+    text-decoration: none;
+    cursor: pointer;
+}
