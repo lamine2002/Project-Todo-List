@@ -8,7 +8,6 @@
     <title>To-do List</title>
 </head>
 <body>
-
 <nav class="navbar">
     <h3>//TO-DO</h3>
 </nav>
@@ -22,21 +21,28 @@
             </div>
 
             <h3>Project</h3>
-            <div class="bottomContent">
+            <button class="btn btn-primary btnAddRepertory">Add Repertory</button>
 
+            <div id="folderInputContainer" style="display: none;">
+                <input class="form-control" type="text" id="folderInput" placeholder="Nom du répertoire" />
             </div>
+
+            <div id="folderList"></div>
+
         </div>
 
         <div class="mainContent">
             <nav class="navBar">
-                <span class="inProgress">In progress</span>
-                <span class="completed">Completed</span>
+                <div class="inProgress">In progress</div>
+                <div class="completed">Completed</div>
 
             </nav>
 
             <button type="button" class="btn btn-primary btnAdd" data-bs-toggle="modal" data-bs-target="#exampleModal">
                 Add Task
             </button>
+
+
             <div class="taskList">
 
             </div>
@@ -54,15 +60,15 @@
                         </div>
                         <div class="modal-body">
 
-                            <form>
+                            <form class="addForm">
                                 <!-- Title -->
                                 <div class="form-outline mb-2">
                                     <label class="form-label" for="title">Title</label>
-                                    <input type="text" id="title" class="form-control" />
+                                    <input type="text" id="title" class="form-control" required min="3"/>
 
                                 </div>
 
-                                <!-- Author -->
+                                <!-- Description -->
                                 <div class="form-outline mb-2">
                                     <label class="form-label" >Description</label>
                                     <textarea class="form-control" id="description" rows="4"></textarea>
@@ -75,9 +81,20 @@
 
                                 </div>
 
+                                <!-- Priority -->
+                                <div class="form-outline mb-2">
+                                    <label class="form-label" >Due Date</label>
+                                    <select id="priority" class="form-control" >\
+                                        <option value="low">Low</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="high">High</option>
+                                    </select>
+
+                                </div>
+
 
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-primary addingTask" data-mdb-dismiss="modal">Add</button>
+                                    <button type="submit" class="btn btn-primary addingTask" data-bs-dismiss="modal">Add</button>
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </form>
