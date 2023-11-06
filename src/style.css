@@ -1,7 +1,14 @@
-:root{
-    --task-border : 5px solid;
+:root {
+    --task-border: 5px solid;
 }
-.content{
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.content {
     width: 100%;
     height: 90vh;
     display: flex;
@@ -9,8 +16,7 @@
     font-size: 1.3rem;
 }
 
-
-.sideBar{
+.sideBar {
     width: 23%;
     height: 100%;
     background-color: #06f9f5;
@@ -20,7 +26,7 @@
     padding-top: 5%;
 }
 
-.navbar{
+.navbar {
     width: 100%;
     height: 10vh;
     display: flex;
@@ -29,115 +35,175 @@
     align-items: center;
     background-color: #f8efe7;
 }
-.upContent{
+
+.upContent {
     margin-bottom: 15px;
     cursor: pointer;
 }
 
-.mainContent{
+.mainContent {
     width: 77%;
     height: 100%;
     background-color: #f8efe7;
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: scroll;
-
 }
-.taskList{
-    /*// creer un scroll*/
+
+.taskList {
     width: 95%;
     margin-top: 2%;
 }
 
-.card-body-list{
-
+.card-body-list {
     background-color: #f5f2ee;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.cardRight{
+    display: flex;
+    flex-direction: row;
 }
 
+.cardRight *{
+    margin-right: 1rem;
+}
+
+
+
+
 .btnAdd {
-    position: sticky;
-    top: 0;
     width: 30%;
     font-size: 1.3rem;
     font-weight: bold;
     cursor: pointer;
     margin-top: 2%;
     margin-bottom: 2%;
-    z-index: 1; /* Pour s'assurer que le bouton est au-dessus des tâches en défilement */
 }
 
 .mainContent > .navBar {
-    position: sticky;
-    top: 0;
     width: 100%;
     height: 10vh;
     align-items: center;
     background-color: #06f9f5;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    z-index: 1; /* Pour s'assurer que la barre de navigation est au-dessus des tâches en défilement */
+    display: flex;
 }
 
-.mainContent > .navBar > span{
+.mainContent > .navBar > div {
     color: black;
     font-size: 1.3rem;
     margin-left: 5%;
     text-decoration: none;
     cursor: pointer;
+    height: 100%;
 }
-.low{
+
+
+.taskList {
+    width: 100%;
+    height: 80vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#folderList {
+    width: 100%;
+    height: 50vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#folderList > div {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.low {
     border-left: var(--task-border) green;
 }
-.medium{
+
+.medium {
     border-left: var(--task-border) orange;
 }
-.high{
+
+.high {
     border-left: var(--task-border) red;
 }
 
-.cardList{
+.cardList {
     margin-bottom: 1rem;
     border-radius: 10px;
 }
 
-.card-body-list{
+.card-body-list {
     background-color: #fbf6ef;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 5px;
 }
 
-.card-body-list:hover{
-/*    Je veux un box-shadow bottom */
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+.card-body-list:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* Barre de défilement verticale */
-::-webkit-scrollbar {
-    width: 12px; /* Largeur de la scrollbar */
+.taskList::-webkit-scrollbar {
+    width: 10px;
 }
 
-::-webkit-scrollbar-thumb {
-    background-color: #06f9f5; /* Couleur de la partie glissante de la scrollbar */
-    border-radius: 6px; /* Coins arrondis de la partie glissante */
+.taskList::-webkit-scrollbar-thumb {
+    background-color: #06f9f5;
+    border-radius: 6px;
 }
 
-::-webkit-scrollbar-track {
-    background-color: #f0f0f0; /* Couleur de la piste de la scrollbar */
+.taskList::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
 }
 
-/* Barre de défilement horizontale (optionnelle) */
-::-webkit-scrollbar-horizontal {
-    height: 12px; /* Hauteur de la scrollbar horizontale */
+.taskList::-webkit-scrollbar-thumb:horizontal {
+    background-color: #ff0000;
 }
 
-::-webkit-scrollbar-thumb:horizontal {
-    background-color: #ff0000; /* Couleur de la partie glissante de la scrollbar horizontale */
+/* Barre de défilement verticale */
+#folderList::-webkit-scrollbar {
+    width: 10px;
+}
+
+#folderList::-webkit-scrollbar-thumb {
+    background-color: #f5f2ee;
+    border-radius: 6px;
+}
+
+#folderList::-webkit-scrollbar-track {
+    background-color: #06f9f5;
+}
+
+#folderList::-webkit-scrollbar-thumb:horizontal {
+    background-color: #ff0000;
+}
+
+.icon {
+    width: 40px; /* Ajustez la taille selon vos besoins */
+    height: 40px; /* Ajustez la taille selon vos besoins */
+    color: #d22626;
+    cursor: pointer;
+}
+
+.btnAddRepertory {
+    width: 50%;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+#folderInputContainer{
+    width: 70%;
 }
