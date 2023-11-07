@@ -191,7 +191,7 @@ body {
     background-color: #ff0000;
 }
 
-.icon {
+.iconEdit, .iconDelete {
     width: 40px; /* Ajustez la taille selon vos besoins */
     height: 40px; /* Ajustez la taille selon vos besoins */
     color: #d22626;
