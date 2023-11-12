@@ -81,7 +81,7 @@ function getTasks() {
 // Creer un repertoire
 function createFolder(title) {
     return {
-        id: title.replace(/[^a-zA-Z0-9-]/g, '-'),
+        id: title.replace(/[^a-zA-Z0-9-]/g, '-')+Date.now(),
         title: title,
     };
 }
@@ -89,7 +89,7 @@ function createFolder(title) {
 // Creer une tache
 function createTask(title, description, dueDate, priority, repertory, completed = false) {
     return {
-        id: title.replace(/[^a-zA-Z0-9-]/g, '-'),
+        id: title.replace(/[^a-zA-Z0-9-]/g, '-')+Date.now(),
         title: title,
         description: description,
         dueDate: dueDate,
