@@ -38,7 +38,7 @@
 
             </nav>
 
-            <button type="button" class="btn btn-primary btnAdd" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-primary btnAdd" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
                 Add Task
             </button>
 
@@ -51,7 +51,7 @@
 
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -94,7 +94,7 @@
 
 
                                 <div class="modal-footer">
-                                    <button type="submit" class="btn btn-primary addingTask" data-bs-dismiss="modal">Add</button>
+                                    <button type="submit" class="btn btn-primary addingTask" >Add</button>
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                                 </div>
                             </form>
